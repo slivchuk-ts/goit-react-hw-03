@@ -12,7 +12,7 @@ const validationSchema = Yup.object({
     .max(50, "Maximum 50 characters")
     .required("This field is required"),
   number: Yup.string()
-    .matches(/^\+?[1-9]\d{1,14}$/, 'Invalid phone number')
+    .matches(/^\d{3}-\d{2}-\d{2}$/, "Phone number must be in the format 000-00-00")
     .min(3, 'Minimum 3 digits')
     .max(50, 'Maximum 50 digits')
     .required("This field is required"),

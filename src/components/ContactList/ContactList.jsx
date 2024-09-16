@@ -3,7 +3,7 @@ import Contact from '../Contact/Contact'
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
-        <ul className={s.list}>
+        <div className={s.list}>
             {contacts.map(({ id, name, number }) => (
                 <Contact
                     key={id}
@@ -13,7 +13,7 @@ const ContactList = ({ contacts, onDeleteContact }) => {
                     onDelete={() => onDeleteContact(id)}
                 />
             ))}
-        </ul>
+        </div>
     );
 };
 export default ContactList;
